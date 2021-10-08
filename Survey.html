@@ -1,10 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <style>
+        h2{
+            font-family: "American Typewriter";
+        }
+        table,th,td{
+            border: 1px solid black;
+            border-collapse: collapse;
+            font-size:small;
+        }
+    </style>
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
 <body>
+<h2>Market Research Survey</h2>
+<form action="Survey.html" method=""
+<p>Please takes a few momments to complete this satisfaction survey</p>
+
+<p><b>What is your age range?</b></p>
+<select style="font-size:100%;>
+    <option value=" ">18-24</option>
+    <option value=" ">25-34</option>
+    <option value=" ">35-50</option>
+    <option value=" ">50+</option>
+</select>
+
+<p><b>What is your yearly income range?</b></p>
+<select style="font-size:100%;">
+    <option value="">$0-$25000</option>
+    <option value="">$25001-$50000</option>
+    <option value="">$50001-$100000</option>
+    <option value="">$100000+</option>
+</select>
+
+<p><b>Gender Identity</b></p>
+    <input type="radio" name="Gender" value=" ">Male
+<br/>
+    <input type="radio" name="Gender" value=" ">Female
+<br/>
+    <input type="radio" name="Gender" value=" ">Nonbinary
+<br/>
+    <input type="radio" name="Gender" value=" ">Other
+<br/>
+    <input type="textbox"/>
+
+<p><b>Which of the following products have your purchased in the last 2 months. Please check all that apply.</b></p>
+    <input type="checkbox" name="Products" value=" "> Product 1
+<br/>
+    <input type="checkbox" name="Products" value=" "> Product 2
+<br/>
+    <input type="checkbox" name="Products" value=" "> Product 3
+<p><b>How often would you use our new product?</b></p>
+    <input type="radio" name="Newproduct" value="">Daily
+<br/>
+    <input type="radio" name="Newproduct" value="">Weekly
+<br/>
+   <input type="radio" name="Newproduct" value="">Monthly
+<br/>
+<p><b>What would you pay for the new product?</b></p>
+<p>$
+    <input type="textbox" size="10"/>.
+    <input type="textbox" size="5"</p>
+<br/>&emsp;dollars &emsp;&emsp;cents</p>
+
+<p><b>What features would you like to see in the new product?</b></p>
+<textarea></textarea>
+
+<p><b>Please rate your level of agreement with the following statements</b></p>
+<table style="width:100%">
+    <tr Text-align="center;">
+        <th style="width:500px;"></th>
+        <th style="width:100px;"> Strongly Disagree</th>
+        <th style="width:100px;">Disagree</th>
+        <th style="width:100px;">Agree</th>
+        <th style="width:100px;">Strongly Agree</th>
+    </tr>
+    <tr>
+        <td>Our product are priced fairly</td>
+        <td style="text-align:center;"><input type="radio" name="price" value=" "><br/>1
+        </td>
+        <td style="text-align:center;"><input type="radio" name="price" value=" "><br/>2
+        </td>
+        <td style="text-align:center;"><input type="radio" name="price" value=" "><br/>3
+        </td>
+        <td style="text-align:center;"><input type="radio" name="price" value=" "><br/>4
+        </td>
+    </tr>
+         <td>Our product are high quality</td>
+        <td style="text-align:center;"><input type="radio" name="quality" value=" "><br/>1
+        </td>
+         <td style="text-align:center;"><input type="radio" name="quality" value=" "><br/>2
+          </td >
+         <td style="text-align:center;"><input type="radio" name="quality" value=" "><br/>3
+        </td>
+         <td style="text-align:center;"><input type="radio" name="quality" value=" "><br/>4
+         </td>
+    <tr>
+    <td>You would recommend our product to a friend or coworker</td>
+        <td style="text-align:center;"><input type="radio" name="recommend" value=" "><br/>1
+        </td>
+        <td style="text-align:center;"><input type="radio" name="recommend" value=" "><br/>2
+        </td>
+        <td style="text-align:center;"><input type="radio" name="recommend" value=" "><br/>3
+        </td>
+        <td style="text-align:center;"><input type="radio" name="recommend" value=" "><br/>4
+        </td
+    </tr>
+</table>
+<input type="submit" value="submit"/>
 
 </body>
 </html>
