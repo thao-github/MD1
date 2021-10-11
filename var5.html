@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Average/Sum</title>
+</head>
+<body>
+<script>
+    let inputPhy= prompt("Nhap diem Vat Ly");
+    let inputChe= prompt ("Nhap diem Hoa hoc");
+    let inputBio=prompt ("Nhap diem Sinh hoc");
+    let Phy= parseInt (inputPhy);
+    let Che= parseInt (inputChe);
+    let Bio= parseInt (inputBio);
+
+    let average= (Phy + Che+ Bio)/3;
+    document.write("Diem trung binh 3 mon la:" +average)
+    document.write('<br/>')
+    let sum= Phy + Che+ Bio;
+    document.write("Tong diem 3 mon la:" +sum)
+</script>
+</body>
+</html>
