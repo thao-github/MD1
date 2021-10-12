@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Currency</title>
+</head>
+<body>
+<table style="text-align: center">
+    <tr>
+        <td>Amount</td>
+        <td>Form Currency</td>
+        <td>To Currency</td>
+        <td>Result</td>
+    </tr>
+    <tr>
+        <td><label for="input"><input type="text" id="input"></label></td>
+        <td>
+            <label for="formCurrency">
+                <select id="formCurrency">
+                    <option value="1">USD</option>
+                    <option value="23000">Việt Nam Đồng</option>
+                </select>
+            </label>
+        </td>
+        <td>
+            <label for="toCurrency">
+                <select id="toCurrency">
+                    <option value="23000">Việt Nam Đồng</option>
+                    <option value="1">USD</option>
+                </select>
+            </label>
+        </td>
+        <td><button onclick="changeMoney()">Convert</button></td>
+    </tr>
+</table>
+<h1 id="result"></h1>
+<script>
+    function changeMoney() {
+        let input = parseInt(document.getElementById("input").value)
+        let formCurrency = parseInt(document.getElementById("formCurrency").value)
+        let toCurrency = parseInt(document.getElementById("toCurrency").value)
+        document.getElementById("result").innerHTML = input / formCurrency * toCurrency
+    }
+</script>
+</body>
+</html>
