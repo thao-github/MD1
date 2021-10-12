@@ -1,10 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title> Caculator </title>
 </head>
 <body>
-$END$
+<form>
+    <h2>Caculator</h2>
+    <input type="text" id="No1"/> <input type="text" id="No2"/>
+    <br/>
+    <button type="button" onclick="Tinhtong()"> Addition(+)</button>
+    <button type="button" onclick="Tinhhieu()"> Subtraction(-)</button>
+    <button type="button" onclick="Tinhnhan()"> Multiplication(x)</button>
+    <button type="button" onclick="Tinhchia()"> Division(/)</button>
+
+    <script>
+        function Tinhtong(){
+            let x=parseInt(document.getElementById("No1").value);
+            let y=parseInt(document.getElementById("No2").value);
+            let z=x+y;
+            document.write("Tinh tong:"+z)
+        }
+    </script>
+    <script>
+        function Tinhhieu() {
+            let x = parseInt(document.getElementById("No1").value);
+            let y = parseInt(document.getElementById("No2").value);
+            let z = x - y;
+            document.write("Tinh hieu:" + z)
+        }
+    </script>
+    <script>
+        function Tinhnhan(){
+            let x=parseInt(document.getElementById("No1").value);
+            let y=parseInt(document.getElementById("No2").value);
+            let z=x*y;
+            document.write("Tinh nhan:"+z)
+        }
+    </script>
+    <script>
+        function Tinhchia(){
+            let x=parseInt(document.getElementById("No1").value);
+            let y=parseInt(document.getElementById("No2").value);
+            let z=x/y;
+            document.write("Tinh chia:"+z)
+        }
+    </script>
+</form>
 </body>
 </html>
