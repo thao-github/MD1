@@ -8,23 +8,23 @@
 <table style="text-align: center">
     <tr>
         <td>Amount</td>
-        <td>Form Currency</td>
+        <td>From Currency</td>
         <td>To Currency</td>
         <td>Result</td>
     </tr>
     <tr>
         <td><label for="input"><input type="text" id="input"></label></td>
         <td>
-            <label for="formCurrency">
-                <select id="formCurrency">
+            <label for="FromCurrency">
+                <select id="FromCurrency">
                     <option value="1">USD</option>
                     <option value="23000">Việt Nam Đồng</option>
                 </select>
             </label>
         </td>
         <td>
-            <label for="toCurrency">
-                <select id="toCurrency">
+            <label for="ToCurrency">
+                <select id="ToCurrency">
                     <option value="23000">Việt Nam Đồng</option>
                     <option value="1">USD</option>
                 </select>
@@ -37,9 +37,9 @@
 <script>
     function changeMoney() {
         let input = parseInt(document.getElementById("input").value)
-        let formCurrency = parseInt(document.getElementById("formCurrency").value)
-        let toCurrency = parseInt(document.getElementById("toCurrency").value)
-        document.getElementById("result").innerHTML = input / formCurrency * toCurrency
+        let FromCurrency = parseInt(document.getElementById("FromCurrency").value)
+        let ToCurrency = parseInt(document.getElementById("ToCurrency").value)
+        document.getElementById("result").innerHTML = input / FromCurrency * ToCurrency
     }
 </script>
 </body>
