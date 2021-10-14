@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>personal income tax calculation</title>
+</head>
+<body>
+<script>
+    let income=parseInt(prompt("Input income"));
+    let tax;
+
+    if(income<=5){
+        tax=income * 0.05;
+        document.write("The tax you have to pay is: " +tax)
+    }
+        else if(income>5 && income<=10){
+        tax= 5*0.05 +(income-5)*0.1
+        document.write("The tax you have to pay is: " +tax)
+    }
+        else if(income>10 && income<=18){
+        tax= 5*0.05 + 5*0.1 +(inccome-10)*0.15
+        document.write("The tax you have to pay is: " +tax)
+    }
+        else if(income>18 && income<=32){
+        tax= 5*0.05 + 5*0.1 + 8*0.15+ (income-18)*0.2
+        document.write("The tax you have to pay is: " +tax)
+    }
+        else if(income>32 && income<=52){
+        tax= 5*0.05 + 5*0.1 + 8*0.15 + 14*0.2 + (income-32)*0.25
+        document.write("The tax you have to pay is: " +tax)
+    }
+        else if(income>52 && income<=80){
+        tax= 5*0.05 + 5*0.1 + 8*0.15 + 14*0.2 + 20*0.25 + (income-52)*0.3
+        document.write("The tax you have to pay is: " +tax)
+    }
+    else{
+    tax= 5*0.05 + 5*0.1 + 8*0.15 + 14*0.2 + 20*0.25 + 28*0.3 + (income-80)*0.35
+    document.write("The tax you have to pay is: " +tax)
+    }
+</script>
+</body>
+</html>

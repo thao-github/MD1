@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>electricity price</title>
+</head>
+<body>
+<script>
+    let i=parseInt(prompt("Input so dien"));
+    let bill;
+    if(i>0 && i<=50){
+        bill=(i*1678);
+        document.write("The bill is:" + bill)
+    }
+        else if(i>50 && i<100){
+        bill = (50 * 1678) + (i - 50) * 1734;
+        document.write("The bill is:" + bill)
+    }
+        else if(i>100 && i<=200){
+        bill = (50 * 1678) + (50 * 1734) + (i - 100) * 2014;
+        document.write("The bill is:" + bill)
+    }
+        else if(i>200 && i<=300){
+        bill=(50*1678) + (50*1734) +(100*2014)+(i-200)*2536;
+        document.write("The bill is:" + bill)
+    }
+        else if(i>300 && i<=400){
+        bill = (50 * 1678) + (50 * 1734) + (100 * 2014) + 100 * 2834 + (i - 300) * 2834;
+        document.write("The bill is:" + bill)
+    }
+    else{
+        bill= (50*1678) + (50*1734) +(100*2014) + 100*2834 + 100*2834 +(i-400)*2461;
+        document.write("The bill is:" + bill)
+    }
+</script>
+</body>
+</html>

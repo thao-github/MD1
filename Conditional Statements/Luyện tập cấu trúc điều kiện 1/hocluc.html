@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>class ranking</title>
+</head>
+<body>
+<script>
+    let a=parseFloat(prompt("Input test score"));
+    let b=parseFloat(prompt("Input midterm score"));
+    let c=parseFloat(prompt("Input final exam score"));
+    let score=a+b+c;
+
+    if(24<=score && score<=30){
+        document.write("Execellent");
+    }
+    else if(19.5<=score && score<24){
+        document.write("Good");
+    }
+    else if(15<=score && score<19.5){
+        document.write("Fair");
+    }
+    else{
+        document.write("Poor");
+    }
+</script>
+</body>
+</html>

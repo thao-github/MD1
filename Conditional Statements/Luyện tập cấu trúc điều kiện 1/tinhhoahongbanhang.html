@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>sales bonus</title>
+</head>
+<body>
+<script>
+    let sales=parseInt(prompt("Input sales"));
+    let bonus;
+
+    if(sales>0 && sales<=100){
+        bonus = sales * 0.05;
+        document.write("The bonus is: " + bonus)
+    }
+        else if (sales>100 && sales<=500){
+            bonus = 100 * 0.05 +(sales - 100) * 0.1;
+            document.write("The bonus is:" + bonus)
+        }
+        else if (sales>500 && sales<=1000){
+        bonus = 100 * 0.05 + 400 * 0.1 + (sales-500)*0.15;
+        document.write("The bonus is:" + bonus)
+    }
+    else {
+        bonus= 100 * 0.05 + 400 * 0.1 + 500*0.15+ (sales- 1000)* 0.2;
+        document.write("The bonus is:" + bonus)
+    }
+</script>
+</body>
+</html>
