@@ -2,22 +2,22 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>leapyear</title>
+    <title>leap year</title>
 </head>
 <body>
-<label>hập vào 1 năm <input type="text" id="year"/></label>
+<label>Input year <input type="text" id="year"/></label>
 <button type="button" onclick="leapyear();">Check</button>
 <script>
     function leapyear(){
     let a=parseInt(document.getElementById("year").value);
     if(a%4===0 && a%100!==0){
-        alert(a+ "la nam nhuan")
+        alert(a+ " is leap year")
     }
         else
         if(a%100===0 && a%400===0){
-            alert(a + "la nam nhuan")
+            alert(a + " is leap year")
         }
-    else alert(a+ "khong la nam nhuan")
+    else alert(a+ " is not leap year")
     }
     // clean code:https://james.codegym.vn/mod/assign/view.php?id=5811&forceview=1
 </script>

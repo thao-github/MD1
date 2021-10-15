@@ -6,18 +6,18 @@
 </head>
 <body>
 <script>
-    let height=parseFloat(prompt("Input height (m)"));
-    let weight=parseFloat(prompt("Input weight (kg)"));
-    let bmi=weight/(height*height);
-    alert("bmi:"+bmi)
+    let height = parseFloat(prompt("Input height (m)"));
+    let weight = parseFloat(prompt("Input weight (kg)"));
+    let bmi = weight/(height*height);
+    alert("bmi:" +bmi)
 
-    if(bmi<18.5){
+    if (bmi<18.5) {
         document.write("Underweight")
     }
-    else if(18.5<=bmi && bmi<=25.0){
+    else if (18.5<=bmi && bmi<=25.0) {
         document.write("Normal")
     }
-    else if(25.0<=bmi && bmi<30.0){
+    else if (25.0<=bmi && bmi<30.0) {
         document.write("Overweight")
     }
     else {
