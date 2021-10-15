@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Kiểm tra tam giác</title>
 </head>
 <body>
 <p id="demo"></p>
@@ -11,12 +11,17 @@
     let b=parseInt(prompt("Nhập độ dài cạnh thứ hai"));
     let c=parseInt(prompt("Nhập độ dài cạnh thứ ba"));
 
-    if(a>0 && b>0 && c>0) {
-     if (a + b > c && b + c > a && a + c > b) {
-            document.getElementById("demo").innerHTML = "Là cạnh của 1 tam giác"
-        } else {
-            document.getElementById("demo").innerHTML = "không là cạnh của 1 tam giác"
-        }
+    if(a>0 && b>0 && c>0){
+        if(a + b > c && b + c > a && a + c >b && a===b && a===c){
+            document.getElementById("demo").innerHTML = "Là cạnh của 1 tam giác đều"}
+        else if ( a + b > c && b + c > a && a + c >b && a===b || b===c || a===c){
+            document.getElementById("demo").innerHTML = "Là cạnh của 1 tam giác cân"}
+        else if(a + b > c && b + c > a && a + c >b && a**2===b**2+c**2 || b**2===a**2 + c**2 || c**2===a**2 + b**2){
+            document.getElementById("demo").innerHTML = "Là cạnh của 1 tam giác vuông"}
+        else if (a + b > c && b + c > a && a + c > b) {
+            document.getElementById("demo").innerHTML = "Là cạnh của 1 tam giác"}
+    else {
+        document.getElementById("demo").innerHTML = "Không là cạnh của 1 tam giác"}
     }
 
 </script>
