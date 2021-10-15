@@ -8,7 +8,12 @@
 <script>
     let a=parseFloat(prompt("Input a"));
     let area=a*a
-    document.write("The area of the square is: " +area)
+    if(a<=0 || b<=0){
+        alert("This is not a side. It must be a positive integer")
+    }
+    else {
+        document.write("The area of the square is: " + area)
+    }
 </script>
 </body>
 </html>

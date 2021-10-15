@@ -7,17 +7,17 @@
 <body>
 <script>
     let x1, x2;
-    let a=parseFloat(prompt("Input a"));
-    let b=parseFloat(prompt("Input b"));
-    let c=parseFloat(prompt("Input c"));
-    let delta=b*b-4*a*c;
+    let a =parseFloat(prompt("Input a"));
+    let b =parseFloat(prompt("Input b"));
+    let c =parseFloat(prompt("Input c"));
+    let delta =b*b-4*a*c;
     if(delta>0){
-        x1=(-b+Math.sqrt(delta))/(2*a);
-        x2=(-b-Math.sqrt(delta))/(2*a);
+        x1 =(-b+Math.sqrt(delta))/(2*a);
+        x2 =(-b-Math.sqrt(delta))/(2*a);
         document.write("The roots of quadratic equation are " +x1 +" and "+ +x2)
     }
-    else if(delta===0) {
-        x1=x2=-b/(2*a);
+    else if(delta ===0) {
+        x1 =x2=-b/(2*a);
         document.write("The roots of quadratic equation are " +x1 +" and "+ +x2)
     }
     else{

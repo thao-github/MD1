@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fibonacci</title>
+</head>
+<body>
+<h2> The Fibonacci 20</h2>
+<script>
+    let n1 = 0; n2 = 1;
+    let n3;
+    let count=0;
+    while(count<20){
+        n3 = n2+n1
+        document.write(" "+n3)
+        n1 = n2
+        n2 = n3;count++;
+    }
+</script>
+</body>
+</html>

@@ -9,7 +9,11 @@
     let a=parseFloat(prompt("Input the length"));
     let b=parseFloat(prompt("Input the width"));
     let area=a*b
-    document.write("The area of the rectangular is: "+area)
+    if(a<=0 || b<=0)
+        alert("This is not a side. It must be a positive interger")
+    else {
+        document.write("The area of the rectangular is: " + area)
+    }
 </script>
 </body>
 </html>

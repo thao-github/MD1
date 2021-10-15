@@ -10,10 +10,13 @@
     let b=parseInt(prompt("Input b"));
     let c=parseInt(prompt("Input c"));
 
-    if(a>0 && b>0 && c>0){}
-
-    if(a+b>c && b+c>a && a+c>b){
-
+    if(a<0 || b<0 || c<0){
+        alert("This is not the sides of a triangle")}
+     else if(a+b>c && b+c>a && a+c>b){
+         document.write("This is 3 sides of a triangle")
+        }
+     else {
+        document.write("This is not 3 sides of a triangle")
     }
 </script>
 </body>

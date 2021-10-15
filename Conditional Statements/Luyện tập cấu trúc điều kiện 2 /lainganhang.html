@@ -7,22 +7,22 @@
 <body>
 <script>
     let $=parseFloat(prompt("Input the amount of money"));
-    let months=parseFloat(prompt("Input the number of month"));
+    let months=parseFloat(prompt("Input the number of months"));
     let rate=parseFloat(prompt("Input the deposit interest rate of bank"));
     let i;
     if(months>=1 && months<=2){
-        i= Math.round($ * (months/12) * rate);
+        i = Math.round($ * (months/12) * rate);
         document.write( "The interest is: "+ i)
     }
     else if(months>3 && months<6) {
-        i = Math.round($ * 2 * 0.031 / 12 * rate + $ * months * (rate / 12))
+        i = Math.round($*2*0.031/12*rate + $*months*(rate/12))
         document.write("The interest is:" + i)
     }
     else if(months>=6 && months<=11){
-        i= Math.round($ *2 *0.031/12*rate +  $*5 *0.034/12*rate+  $*months*(rate/12))
+        i = Math.round($*2*0.031/12*rate +  $*5*0.034/12*rate+  $*months*(rate/12))
         document.write("The interest is:" + i)
     }
-    else{i=Math.round($*2 *0.031/12*rate +  $*5 *0.034/12*rate+  $*6*0.04/12*rate + $*months*(rate/12))
+    else{i = Math.round($*2*0.031/12*rate +  $*5*0.034/12*rate+  $*6*0.04/12*rate + $*months*(rate/12))
         document.write("The interest is:" + i)}
 </script>
 </body>
