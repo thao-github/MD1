@@ -7,15 +7,17 @@
 <body>
 <h2> The Fibonacci 20</h2>
 <script>
-    let n1 = 0; n2 = 1;
-    let n3;
-    let count=0;
-    while(count<20){
-        n3 = n2+n1
-        document.write(" "+n3)
-        n1 = n2
-        n2 = n3;count++;
+  let n = 20;
+  let n1 = 0;
+  let n2 = 1;
+  let n3;
+    for(let i = 1; i <= n; ++i){
+        document.write (n1 + " , ")
+        n3 = n1 + n2;
+        n1 = n2;
+        n2 = n3;
     }
+
 </script>
 </body>
 </html>

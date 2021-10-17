@@ -6,14 +6,15 @@
 </head>
 <body>
 <script>
-    let n1 = 0; n2 = 1;
+    let n1 = 0;
+    let n2 = 1;
     let n3 = n2 + n1;
-    while(n3%5 !== 0){
-        n3 = n2+n1
+    while(n3 % 5 !== 0){
+        n3 = n2 + n1
         n1 = n2
-        n2 = n3;n3;
+        n2 = n3
     }
-        document.write(+n3)
+        document.write( "The first fibonacci is divisible: " +n3)
 </script>
 </body>
 </html>

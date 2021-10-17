@@ -2,17 +2,19 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>sum of fibonacci 20</title>
+    <title>Sum of 20 fibonacci number</title>
 </head>
 <body>
 <script>
-    let n1 = 0; n2 = 1; n3 = n2 + n1;
-    let sum = 0;
-    for(let i=0; i<20; i++){
-        n3 = n1 + n2
+    let n1 = 0;
+    let n2 = 1;
+    let n3;
+    let sum = 1;
+    for(let i = 0; i < 20; i++){
+        n3 = n2 + n1
         sum = sum + n3
         n1 = n2
-        n2 = n3;
+        n2 = n3
     }
     document.write(+sum)
 </script>
