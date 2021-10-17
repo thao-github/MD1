@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Multiplication table</title>
+</head>
+<body>
+<script>
+    let number;
+    number = "<table style='border: solid 1px; width: 100%'>"
+    for(let i = 1; i < 10; i++){
+        number = number + "<tr style='border: solid 1px;'>";
+        for (let j = 2; j < 10; j++) {
+           number = number + "<td style='border: solid 1px;'>" + j + " x " + i + " = " + i * j + "<br>" + "</td>";
+        }
+        number = number + "</tr>"
+    }
+    number = number + "</table>"
+    document.write(number)
+</script>
+</body>
+</html>
