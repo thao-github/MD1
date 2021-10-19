@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>pop()</title>
+</head>
+<body>
+ <script>
+     let arr = [2, 4, 6, 8]
+     //xoá số 8 khỏi mảng.
+     function xoa() {
+         let newArr = new Array(3)
+         for (let i = 0; i < arr.length; i++) {
+             newArr[i] = arr[i];
+         }
+         arr = newArr;
+         console.log(newArr);
+     }
+ </script>
+</body>
+</html>
