@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dictionary</title>
+</head>
+<body>
+
+<h2> English - Vietnamese dictionary </h2>
+Input word <input type="text" id="txt">
+<input type="button" value="Look up" onclick="look_up();">
+<script>
+    let engW = ["variable", "operator", "loop", "array", "element", "index"];
+    let vW = ["biến", "toán tử", "vòng lặp", "mảng", "phần tử", "chỉ số"];
+    let found = false;
+
+    function look_up() {
+        for (let i = 0; i < engW.length; i++) {
+            let input = document.getElementById("txt").value;
+            if (input === engW[i]) {
+                found = true;
+                alert(vW[i])
+                break;
+            }
+        }
+        if (found) {
+            alert(vW[i])
+        } else {
+            alert("Can not be found")
+        }
+    }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Max in the array</title>
+</head>
+<body>
+<!--<p> The highest number is <span id="demo"></span>.</p>-->
+<script>
+    let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    let max = arr[0];
+    let index = 0;
+    for (let i = 0; i < arr.length; i++) {
+        if (max < arr[i]) {
+            max = arr[i]
+            index = i
+        }
+    }
+    alert("The highest number is " + max + " at position " +index)
+
+//Cách 2
+    // document.getElementById("demo").innerHTML = myArrayMax(int);
+    //
+    // function myArrayMax(int) {
+    //     return Math.max.apply(null, int);
+    // }
+</script>
+</body>
+</html>

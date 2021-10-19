@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Count negative integer</title>
+</head>
+<body>
+<script>
+    let arr = [-5, -4, -3, -2, -1, 1, 2, 3, 4, 5];
+    let count = 0;
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] < 0) {
+            count++
+        }
+    }
+    alert("There are " + count + " negative integers in the array")
+</script>
+</body>
+</html>

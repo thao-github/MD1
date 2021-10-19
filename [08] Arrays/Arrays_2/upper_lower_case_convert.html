@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Upper_Lower_case_Convert</title>
+</head>
+<body>
+<script>
+
+let str = prompt("Input text");
+const UPPER = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+const LOWER = "abcdefghijklmnopqrstuvwxyz";
+const result = [];
+
+for(let i = 0; i < str.length; i++) {
+    if(UPPER.includes(str[i])) {
+        result.push(str[i].toLowerCase());
+    }
+    else if(LOWER.includes(str[i])) {
+        result.push(str[i].toUpperCase());
+    }
+    else {
+        result.push(str[i]);
+    }
+}
+document.write(result.join(""));
+
+</script>
+</body>
+</html>

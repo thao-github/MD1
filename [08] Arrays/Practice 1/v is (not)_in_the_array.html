@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>V is/ is not in the array</title>
+</head>
+<body>
+<script>
+    let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    let V = +prompt("Input a number");
+    let found = false;
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] === V) {
+            found = true;
+            break;
+        }
+    }
+    if (found) {
+        alert("The " +V + " is in this array")
+    } else {
+        alert("The " +V + " is not in this array")
+    }
+
+
+</script>
+</body>
+</html>
