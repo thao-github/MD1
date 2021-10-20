@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Parameter 1_Parameter 2</title>
+</head>
+<body>
+<script>
+    function parNumber(par1, par2) {
+        if (par1 > par2) {
+            alert("The parameter 1 > the parameter 2")
+        } else {
+            return par1 + par2
+        }
+    }
+
+    let a = parseInt(prompt("Input parameter 1"));
+    let b = parseInt(prompt("Input parameter 2"));
+    let sum = parNumber(a, b)
+    alert(sum)
+</script>
+</body>
+</html>

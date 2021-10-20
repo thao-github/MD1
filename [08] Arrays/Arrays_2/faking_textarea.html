@@ -5,18 +5,55 @@
     <title>Faking textarea on Typing</title>
     <style>
         textarea {
-            display:block;
+            display: block;
             margin-left: auto;
             margin-right: auto;
         }
     </style>
 </head>
-<body>
-<h2 style="text-align: center"> Type anything slowly</h2>
-<textarea id="txt" cols="100%" rows=20" hidden ></textarea>
+<body onload="fake()" style="text-align:center;">
 
+<h2 style="text-align: center"> Type anything slowly</h2>
+<form>
+    <label>
+        <textarea id="txt" cols="60" rows=20"></textarea>
+    </label>
+</form>
 <script>
-  let myTextArea = document.getElementById('myTextArea');
+    let arr = [];
+    let str = "";
+    arr[0] = "I";
+    arr[1] = " ";
+    arr[2] = "A";
+    arr[3] = "M";
+    arr[4] = " ";
+    arr[5] = "N";
+    arr[6] = "O";
+    arr[7] = "T";
+    arr[8] = " ";
+    arr[9] = "A";
+    arr[10] = " ";
+    arr[11] = "G";
+    arr[12] = "I";
+    arr[13] = "R";
+    arr[14] = "L";
+    arr[15] = " ";
+    arr[16] = "!";
+
+    function fake() {
+        let text = document.getElementById("txt").value;
+        for (let i = 0; i < text.length; i++) {
+            str = str + arr[i];
+            if (i === 17) {
+                str = "";
+                break;
+            }
+        }
+        document.getElementById("txt").value = str;
+        str = "";
+        setTimeout("fake()", 1);
+    }
+
 </script>
 </body>
 </html>

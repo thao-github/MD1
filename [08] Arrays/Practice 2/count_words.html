@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>COunt words in the String</title>
+</head>
+<body>
+<script>
+    let word = "Fly me to the moon Let me play up there with those stars"
+    let wordCount = 1;
+    for (let i =0 ; i< word.length; i++) {
+        if (word.charAt(i) === " " && word.charAt(i + 1) !== " ") {
+            wordCount++;
+        }
+    }
+    alert("There are " +wordCount +" words in the String")
+</script>
+
+</body>
+</html>

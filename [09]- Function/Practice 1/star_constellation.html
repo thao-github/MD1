@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>STAR_Constellation</title>
+</head>
+<body>
+<script>
+    let star = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+    let constellation = ["Ursa Minor", "Taurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+    let found = false;
+
+    function starTeller(starName) {
+        for (let i = 0; i < star.length; i++) {
+            if (starNameInput === star[i]) {
+                found = true;
+                return constellation[i]
+            }
+        }
+    }
+
+    let starNameInput = prompt("Input Star name");
+    let constellationName = starTeller(starNameInput)
+
+    if (found) {
+        alert(constellationName)
+    } else {
+        alert("Oops. The Star name can not be found!")
+    }
+
+</script>
+</body>
+</html>
