@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Find Min</title>
+</head>
+<body>
+<script>
+    function minOf() {
+        let min = num1
+        if (num1 <= num2 && num1 <= num3) {
+            min = num1
+        } else if (num2 <= num1 && num2 <= num3) {
+            min = num2
+        } else {
+            min = num3
+        }
+        return min;
+    }
+
+    let num1 = parseInt(prompt("Input the first number"));
+    let num2 = parseInt(prompt("Input the second number"));
+    let num3 = parseInt(prompt("Input the third number"));
+    let min = minOf(num1, num2, num3);
+    alert("The minimum of three numbers is: " + min)
+
+</script>
+</body>
+</html>
