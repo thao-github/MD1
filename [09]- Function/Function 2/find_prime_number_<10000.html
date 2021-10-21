@@ -6,23 +6,48 @@
 </head>
 <body>
 <script>
-    function isPrime(number){
-        check = true;
-        for(let i=0; i<Math.sqrt(primeNumber); i++){
-        }
-        if(primeNumber%i===0 ){
-            check = false
-        }
-        return check;
-        if(check){
-            alert("This is a Prime number")
-        }
-        else {
-            alert("This is not a Prime number")
-        }
-    }
-    let primeNumber = +prompt("Input a number");
-    let check = isPrime(primeNumber);
+   function isPrime() {
+           for (let i = 2; i < Math.sqrt(n); i++) {
+               if (num % i !== 0) {
+                   document.write(num + " , ")
+                   num++
+               }
+           }
+   }
+
+   // let num = parseInt(prompt("Input an integer"));
+   // let check = true
+   let n= 10000
+   let num= 2
+   isPrime(num)
+
+
+
+
+
+    //Check 1 số có phải số nguyên tố?
+    // function isPrime() {
+    //     if (num < 2) {
+    //         check = false
+    //     } else {
+    //         for (let i = 2; i < Math.sqrt(num); i++) {
+    //             if (num % i === 0) {
+    //                 check = false;
+    //             }
+    //         }
+    //     }
+    // }
+    //
+    // let num = parseInt(prompt("Input an integer"));
+    // let check = true
+    // isPrime(num)
+    //
+    // if (check) {
+    //     alert("This is a prime number")
+    // }
+    // else {
+    //     alert("This is not a prime number")
+    // }
 
 </script>
 

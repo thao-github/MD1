@@ -6,24 +6,40 @@
 </head>
 <body>
 <script>
-    let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-    let V= +prompt("Input any number");
-    let found = false;
-    let index = 0;
-    for (let i = 0; i < arr.length; i++) {
-        if (arr[i] === V) {
-            found = true;
-            break;
-        }
+    let arrLength = +prompt('Input the length of the array')
+    let arr = [];
+
+    for(let i = 0; i<arrLength; i++){
+        let element = +prompt('Input element ' + i)
+        arr[i]= element;
+        document.write(arr[i]+' ')
     }
-    if (found) {
-        alert("The " +V + " is in this array")
-        arr.splice(arr.indexOf(V),1)
-        arr.push(0)
-        alert(arr)
-    } else {
-        alert("The " +V + " is not in this array")
-    }
+
+    let inputV = +prompt('Nhập số nguyên V')
+    let count = 0;
+
+    for(let i =0 ; i< arr.length; i++)
+        if(inputV === arr[i]){
+
+
+    // let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    // let V= +prompt("Input any number");
+    // let found = false;
+    // let index = 0;
+    // for (let i = 0; i < arr.length; i++) {
+    //     if (arr[i] === V) {
+    //         found = true;
+    //         break;
+    //     }
+    // }
+    // if (found) {
+    //     alert("The " +V + " is in this array")
+    //     arr.splice(arr.indexOf(V),1)
+    //     arr.push(0)
+    //     alert(arr)
+    // } else {
+    //     alert("The " +V + " is not in this array")
+    // }
 
 </script>
 </body>

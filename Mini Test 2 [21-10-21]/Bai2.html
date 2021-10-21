@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Count a in the array</title>
+</head>
+<body>
+<script>
+    function aCount() {
+        for (let i = 0; i < arr.length; i++) {
+            if (element === arr[i]) {
+                count++
+            }
+        }
+        return count
+    }
+
+    let arr = [1, 3, 5, 7, 9, "a", "b", "c", "a"]
+    let element = prompt("Input a");
+    let count = 0
+    aCount(element)
+    alert("There are " + count + " a elements in the array")
+</script>
+</body>
+</html>
