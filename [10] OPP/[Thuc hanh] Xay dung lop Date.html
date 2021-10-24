@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Date Class</title>
+</head>
+<body>
+<script>
+    class Date {//khởi tạo class
+        date;
+        month;
+        year;
+
+        constructor(date, month, year) {// khởi tạo phương thức class
+            this.date = date;
+            this.month = month;
+            this.year = year;
+        }
+
+        getDay() { //phương thức trả về
+            return this.date;
+        }
+
+        setDay(date) {// phương thức thiết đặt lại
+            this.date = date;
+        }
+
+        getMonth() {
+            return this.month;
+        }
+
+        setMonth(month) {
+            this.month = month;
+        }
+
+        getYear() {
+            return this.year;
+        }
+
+        setYear(year) {
+            this.year = year;
+        }
+    }
+
+    let date = new Date(2, 2, 2007); //tạo đối tượng
+    let day = date.getDay();
+    let month = date.getMonth();
+    let year = date.getYear();
+    alert(day + "/" + month + "/" + year)
+
+    let date = new Date(2, 2, 2007);
+    date.setDay(10)
+    date.setMonth(10)
+    date.setYear(2019)
+    let day = date.getDay();
+    let month = date.getMonth();
+    let year = date.getYear();
+    alert(day + "/" + month + "/" + year)
+
+
+</script>
+</body>
+</html>

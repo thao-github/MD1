@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[Bài tập] Xây dựng lớp mô tả Temperature</title>
+</head>
+<body>
+<script>
+    class Temperature {
+        C;
+
+        constructor(C) {
+            this.C = C;
+
+        }
+        getC () {
+            return this.C
+        }
+        getF (C) {
+            return (1.8 * C) + 32
+        }
+        getK (C) {
+            return C + 273.15
+        }
+    }
+
+    let temperature = new Temperature (25)
+    let C = temperature.getC();
+    let F = temperature.getF(C);
+    let K = temperature.getK(C);
+    document.write("25 C degree is equal to " + F + " F and " + K + " Kelvin ")
+
+</script>
+</body>
+</html>

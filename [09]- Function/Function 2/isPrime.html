@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Check & find prime </title>
+</head>
+<body>
+<script>
+   function isPrime() {
+       if (num < 2) {
+           check = false;
+       }
+       else {
+           for (let i = 2; i <= Math.sqrt(num); i++) {
+               if (num % i === 0) {
+                   check = false;
+               }
+           }
+       }
+   }
+   // let num = parseInt(prompt("Input an integer"));
+   // let check = true;
+   // isPrime(num)
+
+   // if(check){
+   //      alert("This is a Prime number")
+   // }
+   // else{
+   //     alert("This is not a Prime number")
+   // }
+
+   //Tìm số nguyên tố dưới 10 000
+   function primeNumber() {
+       while (count < 10000) {
+           isPrime(num)
+           if(check){
+               document.write(num + ", ")
+           }
+           num++
+           count++
+       }
+   }
+   let count = 0;
+   let num =2;
+   primeNumber(num)
+
+
+</script>
+
+</body>
+</html>
