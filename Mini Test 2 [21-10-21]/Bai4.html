@@ -6,19 +6,36 @@
 </head>
 <body>
 <script>
-    let sum = 0;
-    for(let i = 1; i <500; i++) {
-        let check = 0;
-        for (let j = 2; j < i; j++) {
-            if (i % j == 0) {
-                check = 1;
-                break;
-            }
-        }
-        if (i > 1 && check == 0) {
-            document.write(i + ",")
-        }
-    }
+    // let sum = 0;
+    // for(let i = 1; i <500; i++) {
+    //     let check = false;
+    //     for (let j = 2; j < i; j++) {
+    //         if (i % j === 0) {
+    //             check = 1;
+    //             break;
+    //         }
+    //     }
+    //     if (i > 1 && check == 0) {
+    //         document.write(i + ",")
+    //     }
+    // }
+
+   let num = 2;
+   let sum = 0;
+   while (num < 500){
+       let check = true;
+       for (let i = 2; i <= Math.sqrt(num); i++){
+           if(num % i === 0 ){
+               check = false;
+               break;
+           }
+       }
+       if(check){
+           sum = sum + num
+       }
+       num++
+   }
+   alert (sum)
 
 
 </script>

@@ -6,20 +6,26 @@
 </head>
 <body>
 <script>
-    function sumPrime(){
-        for(let i =0; i<arr.length;i++){
-            for (let j= 0; j<Math.sqrt(arr[i]);j++){
-                if(arr[i] >=2 && arr[i]%j !==0 ) {
-                    sum1 = sum + arr[i]
+    function sumPrime() {
+        let check = true;
+        for (let i = 0; i < arr.length; i++) {
+            for (let j = 2; j <= Math.sqrt(arr[i]); j++) {
+                if (arr[i] % j === 0) {
+                    check = false;
                 }
             }
+            if (check) {
+                sum = sum + arr[i]
+            }
         }
-        return(sum)
+        return sum;
     }
-    let arr =[1,2,3,4,5];
+
+    let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
     let sum = 0;
-    let sum1 = sumPrime(arr)
-    console.log(sum1)
+    let result = sumPrime()
+    console.log (result)
+
 
 </script>
 </body>
