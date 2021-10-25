@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tinh tuoi</title>
+</head>
+<body>
+<script>
+    function countAge() {
+        if (year >= 2021) {
+            alert("Khong hop le")
+        } else {
+            age = 2021 - year
+        }
+        return age
+    }
+
+    let year = +prompt("Input the year");
+    let age;
+    let result = countAge(year)
+    alert(result)
+
+</script>
+</body>
+</html>

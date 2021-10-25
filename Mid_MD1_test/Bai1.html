@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Display Prime number</title>
+</head>
+<body>
+
+ <!--<form>
+     <lable> Enter a number:</lable>
+     <input id="display" type="text"/>
+     <input id="num" type="button" value="Show"/>
+ </form> -->
+ <script>
+     function displayPrime() {
+         while (number < n) {
+             let check = true;
+             for (let i = 2; i <= Math.sqrt(number); i++) {
+                 if (number % i === 0)
+                     check = false;
+             }
+             if (check) {
+                 document.write(number + " ")
+             }
+             number++
+         }
+     }
+     let n = 20;
+     let number = 2;
+     displayPrime()
+
+
+ </script>
+ </body>
+ </html>
