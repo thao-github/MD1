@@ -5,6 +5,81 @@
     <title>Tic tac toe</title>
 </head>
 <body>
+<h3>Caro Game Simple</h3>
+<div id="game"></div>
+<script>
+    let gameBoard = "<table style='border: 1px solid black'>"
+    let board = new Array(
+            ["*", "*", "*"],
+            ["*", "*", "*"],
+            ["*", "*", "*"])
 
+    let turn = 0;
+    for (let i = 0; i < 3; i++) {
+        gameBoard += "<tr>"
+        for (let j = 0; j < 3; j++) {
+            gameBoard += `<td style="border: 1px solid black; padding: 30px " id='${i}${j}' onclick="play(${i},${j})"></td>`;
+        }
+        gameBoard += "</tr>"
+    }
+    gameBoard += "</table>"
+    document.getElementById("game").innerHTML = gameBoard;
+    function checkWinColumn() {
+        if (board[0][0] !== "*" && board[0][0] === board[1][0] && board[0][0] === board[2][0]) {
+            return true;
+        } else if (board[0][1] !== "*" && board[0][1] === board[1][1] && board[0][1] === board[2][1]) {
+            return true
+        } else if (board[0][2] !== "*" && board[0][2] === board[1][2] && board[0][2] === board[2][2]) {
+            return true
+        } else {
+            return false;
+        }
+    }
+
+    function checkWinRow() {
+        if (board[0][0] !== "*" && board[0][0] === board[0][1] && board[0][0] === board[0][2]) {
+            return true;
+        } else if (board[1][0] !== "*" && board[1][1] === board[1][0] && board[1][0] === board[1][2]) {
+            return true
+        } else if (board[2][0] !== "*" && board[2][0] === board[2][1] && board[2][0] === board[2][2]) {
+            return true
+        } else {
+            return false;
+        }
+    }
+
+    function checkWinSub() {
+        if (board[2][0] !== "*" && board[2][0] === board[1][1] && board[2][0] === board[0][2] || board[0][0] !== "*" && board[0][0] === board[1][1] && board[0][0] === board[2][2]) {
+            return true;
+        }
+        return false;
+    }
+
+    function play(i, j) {
+        let id = i + "" + j
+        let x = "";
+        if (turn % 2 === 0) {
+            if (board[i][j] === "*") {
+                x = "X"
+                board[i][j] = x
+                document.getElementById(id).innerHTML = x;
+            }
+        } else if (board[i][j] === "*") {
+            x = "O"
+            board[i][j] = x
+            document.getElementById(id).innerHTML = x;
+        } else { if(turn === 9){
+            alert("Draw");
+        }
+
+        }
+        let isWin = checkWinColumn() || checkWinRow() || checkWinSub();
+        if (isWin) {
+            alert(x + " Win ")
+        }
+        turn++;
+    }
+
+</script>
 </body>
 </html>
