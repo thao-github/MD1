@@ -5,7 +5,30 @@
     <title>Faking textarea on Typing</title>
 
 </head>
+<h1> Type anything slowly </h1>
+<form name="f">
+       <textarea name="txt" cols="40" rows="10" onkeydown="typeTextarea();"></textarea>
+</form>
 
+<script>
+    let a = " TÔI KHÔNG THÍCH !!";
+    let n = "";
+    function typeTextarea() {
+        let  t = document.f.txt.value;
+        let  j = t.length;
+        if (j > 0) {
+            for(let i=1 ; i <= j; i++) {
+                n = n + a[i];
+                if(i === a.length) {
+                    document.f.txt.value = "";
+                    n = "";
+                }
+            }
+        }
+        document.f.txt.value = n;
+        n = "";
+        setTimeout("typeTextarea()", 1);
+    }
 </script>
 </body>
 </html>
