@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lop mo ta dien thoai</title>
+</head>
+<body>
+<script>
+    class Mobile {
+        battery = 100;
+        typingMess = [];
+        receiveMess = [];
+        sendMess = [];
+        status;
+        name;
+        color;
+        price;
+        brand;
+
+        constructor(status, name, color, price, brand) {
+            this.status = status
+            this.name = name
+            this.color = color
+            this.price = price
+            this.brand = brand
+        }
+
+        switchMobile() {
+            if (this.battery > 0) {
+                this.status = false
+            } else {
+                this.status = !this.status
+            }
+        }
+
+        typingMessage(message) {
+            if (this.status) {
+                this.typingMess.push(message)
+            } else {
+                console.log("Turn on your mobile")
+            }
+            this.decreaseBattery()
+        }
+
+        sendMessage(mobile) {
+            if (this.status && mobile.getStatus()) {
+                mobile.setReceiveMess(this.getTypingMess())
+                this.setSendMess(this.getTypingMess())
+                this.typingMess = []
+            } else {
+                console.log("Turn on your mobile")
+            }
+            this.decreaseBattery()
+        }
+
+        decreaseBattery() {
+            if (this.battery > 0 && this.status) {
+                this.battery--
+            } else if (this.battery > 0) {
+                console.log("Turn on your mobile")
+            } else {
+                this.status = false
+                this.battery = 0
+            }
+        }
+
+        chargeBattery() {
+            this.battery = 100
+        }
+
+        getBattery() {
+            return this.battery
+        }
+
+        getStatus() {
+            return this.status
+        }
+
+        getTypingMess() {
+            return this.typingMess
+        }
+
+        setTypingMess(typingMess) {
+            this.typingMess = typingMess
+        }
+
+
+        getReceiveMess() {
+            return this.receiveMess
+        }
+
+        setReceiveMess(receiveMess) {
+            this.receiveMess = receiveMess
+        }
+
+        getSendMess() {
+            return this.sendMess
+        }
+
+        setSendMess(sendMess) {
+            this.sendMess = sendMess
+        }
+
+    }
+
+    let nokia = new Mobile(false, "Nokia 6300", "red", 6000000, "NOKIA")
+    let iphone = new Mobile(false, "Iphone4", "pink", 50000000, "APPLE")
+    console.log(nokia.getBattery())
+    console.log(nokia.getStatus())
+    nokia.switchMobile()
+    // iphone.switchMobile()
+    console.log(nokia.getStatus())
+    console.log(iphone.getStatus())
+    nokia.typingMessage("Hello C09")
+    nokia.sendMessage(iphone)
+    console.log(nokia.getTypingMess())
+    console.log(nokia.getSendMess())
+    console.log(iphone.getReceiveMess())
+    console.log(nokia.getBattery())
+
+</script>
+</script>
+</body>
+</html>

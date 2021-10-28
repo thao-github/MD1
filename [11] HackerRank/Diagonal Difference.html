@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Diagonal Difference</title>
+</head>
+<body>
+<script>
+    function diagonalDifference(arr) {
+        let sum1 = 0;
+        let sum2 = 0;
+        for (let i = 0; i < arr.length; i++) {
+            sum1 += arr[i][i]
+            sum2 += arr[i][arr.length - i - 1]
+        }
+        console.log(Math.abs(sum1 -sum2))
+    }
+    let arr = [[1, 4, 9],[2, 5, 8], [3, 6, 9]];
+    diagonalDifference(arr)
+
+</script>
+</body>
+</html>

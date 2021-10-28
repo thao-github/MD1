@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game PUZZLE</title>
+    <style>
+        img {
+            display: block;
+            margin: 1em;
+            box-shadow: black 4px 4px 9px;
+            padding: 0.2em;
+            vertical-align: middle;
+        }
+
+    </style>
+</head>
+<body>
+<img alt="" class="color" onclick="doiAnh(this.id)" datatype="0"  src="img/funny-cat1_part1x1.jpg" height="160" width="800" id="0"/>
+<img alt="" class="color" onclick="doiAnh(this.id)" datatype="0" src="img/funny-cat1_part2x1.jpg" height="160" width="800" id="1"/>
+<img alt="" class="color" onclick="doiAnh(this.id)" datatype="0" src="img/funny-cat1_part3x1.jpg" height="160" width="800" id="2"/>
+<img alt="" class="color" onclick="doiAnh(this.id)" datatype="0" src="img/funny-cat1_part4x1.jpg" height="160" width="800" id="3"/>
+<img alt="" class="color" onclick="doiAnh(this.id)" datatype="0"  src="img/funny-cat1_part5x1.jpg" height="160" width="800" id="4"/>
+
+<script>
+    function doiAnh(a) {
+
+        let link = "img/";
+        let ArrayLinkImage =
+            [
+                [
+                    "funny-cat1_part1x1.jpeg",
+                    "monkey_part1x1.jpeg",
+                    "panda_swap_part1x1.jpeg",
+                    "q1.jpg"
+                ],
+                [
+                    "funny-cat1_part2x1.jpeg",
+                    "monkey_part2x1.jpeg",
+                    "panda_swap_part2x1.jpeg",
+                    "q2.jpg"
+                ],
+                [
+                    "funny-cat1_part3x1.jpeg",
+                    "monkey_part3x1.jpeg",
+                    "panda_swap_part3x1.jpeg",
+                    "q3.jpg"
+                ],
+                [
+                    "funny-cat1_part4x1.jpeg",
+                    "monkey_part4x1.jpeg",
+                    "panda_swap_part4x1.jpeg",
+                    "q4.jpg"
+                ],
+                [
+                    "funny-cat1_part5x1.jpeg",
+                    "monkey_part5x1.jpeg",
+                    "panda_swap_part5x1.jpeg",
+                    "q5.jpg"
+                ],
+            ];
+        //random img
+        let index1 = (Math.floor(Math.random()*4));
+        let index = (Math.floor(Math.random() * 5))
+        document.getElementById(a).src = link + ArrayLinkImage[a][index1];
+        document.getElementById(a).setAttribute("datatype",index1);
+
+        let a0 = document.getElementById("0").getAttribute("datatype");
+        let a1 = document.getElementById("1").getAttribute("datatype");
+        let a2 = document.getElementById("2").getAttribute("datatype");
+        let a3 = document.getElementById("3").getAttribute("datatype");
+        let a4 = document.getElementById("4").getAttribute("datatype");
+        // xếp thành 1 ảnh thì hiện màu đỏ
+        if (a0 === a1 && a1 === a2 && a2 === a3 && a3 === a4){
+            document.getElementById("0").style.boxShadow = "red 4px 4px 9px";
+            document.getElementById("1").style.boxShadow = "red 4px 4px 9px";
+            document.getElementById("2").style.boxShadow = "red 4px 4px 9px";
+            document.getElementById("3").style.boxShadow = "red 4px 4px 9px";
+            document.getElementById("4").style.boxShadow = "red 4px 4px 9px";
+        }else {
+            document.getElementById("1").style.boxShadow = "black 4px 4px 9px";
+            document.getElementById("2").style.boxShadow = "black 4px 4px 9px";
+            document.getElementById("3").style.boxShadow = "black 4px 4px 9px";
+            document.getElementById("4").style.boxShadow = "black 4px 4px 9px";
+            document.getElementById("0").style.boxShadow = "black 4px 4px 9px";
+        }
+    }
+
+</script>
+</body>
+</html>

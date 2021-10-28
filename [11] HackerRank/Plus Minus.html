@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Plus Minus</title>
+</head>
+<body>
+<script>
+    //Đếm số nguyên âm,đếm số nguyên dương; đếm số 0; count/ số lượng phần tử
+
+    function plusMinus (array) {
+        let count = 0;
+        let count1 = 0;
+        let count2 = 0;
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] < 0) {
+                count++
+            }
+            if(arr[i] === 0 ){
+                count1++
+            }
+            if(arr[i] > 0){
+                count2++
+            }
+        }
+        console.log((count/arr.length).toFixed(6) + " " +(count1/arr.length).toFixed(6) +" " +(count2/arr.length).toFixed(6))
+    }
+    let arr = [-4, -3, -9, 0, 4, 1];
+    plusMinus (arr)
+
+</script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CamelCase</title>
+</head>
+<body>
+<script>
+    let word = "iLoveYouSoMuch"
+    let wCount = 0;
+    function wordCount () {
+        for (let i = 0; i < word.length; i++) {
+            if (word.charAt(i) >= "A" && word.charAt(i) <= "Z") {
+                wCount++;
+            }
+        }
+        console.log(wCount + 1)
+    }
+    wordCount (word)
+
+
+</script>
+</body>
+</html>

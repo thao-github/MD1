@@ -50,21 +50,51 @@
     //         alert('Hi! I\'m ' + this.name.first + '.');
     //     };
     // };
+    // //
+    // // let person1 = new Person('Bob', 'Smith', 32, 'male', ['music', 'skiing']);
+    // // person1.bio();
+    // // person1.greeting();
     //
-    // let person1 = new Person('Bob', 'Smith', 32, 'male', ['music', 'skiing']);
-    // person1.bio();
-    // person1.greeting();
+    // let person1 = new Person();
+    // person1.name = 'Chris';
+    // person1['age'] = 38;
+    // person1.greeting = function() {
+    //     alert('Hi! I\'m ' + this.name + '.');
+    // };
+    //
+    // let person1 = new Object({
+    //     name: 'Chris',
+    //     age: 38,
+    //     greeting: function() {
+    //         alert('Hi! I\'m ' + this.name + '.');
+    //     }
+    // });
+    //
+    // let person2 = Object.create(person1);
 
-    let person1 = new Object();
-    person1.name = 'Chris';
-    person1['age'] = 38;
-    person1.greeting = function() {
-        alert('Hi! I\'m ' + this.name + '.');
-    };
 
+    // function birthdayCakeCandles(candles) {
+    //     let max = candles[0];
+    //     let count = 0;
+    //     for(let i = 0; i< candles.length; i++){
+    //         if(candles[i] > max){
+    //             max = candles[i]
+    //         }
+    //     }
+    //     return count(max)
+    // }
+    // let candles = [1,2,3,4,5,5]
+    // let count = birthdayCakeCandles(candles)
+    // alert(count)
 
+//Tính tổng lớn nhất và tổng nhỏ nhất trong array
+    function sum(){
+        for( let i = 0; i<arr.length; i++){
+            sum = arr[i]+arr[arr.length -1]
+        }
+    }
 
-
+let arr= [1,2,3,4,5]
 </script>
 </body>
 </html>

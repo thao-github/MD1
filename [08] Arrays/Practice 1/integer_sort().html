@@ -11,18 +11,18 @@
     let arr = [10, 2, 4, 3, 5, 9, 7, 8, 5, 1];
     document.getElementById("demo").innerHTML = arr;
 
-    // function myFunction() {
-    //     arr.sort(function (a, b) {
-    //         return a - b //so sánh a < b, a - b < 0 -> a đứng trước b; sx từ lớn xuống nhỏ b - a
-    //     });
-    //     document.getElementById("demo").innerHTML = arr;
-    // }
-
-    //CÁCH 2:
-    for(let i=0; i<arr.length; i++){
-        for(let j=0; j<arr.lenghth; j++)
-            if(arr[i])<arr[j])
+    function myFunction() {
+        arr.sort(function (a, b) {
+            return a - b //so sánh a < b, a - b < 0 -> a đứng trước b; sx từ lớn xuống nhỏ b - a
+        });
+        document.getElementById("demo").innerHTML = arr;
     }
+
+    // //CÁCH 2:
+    // for(let i=0; i<arr.length; i++){
+    //     for(let j=0; j<arr.lenghth; j++)
+    //         if(arr[i])<arr[j])
+    // }
 </script>
 </body>
 </html>

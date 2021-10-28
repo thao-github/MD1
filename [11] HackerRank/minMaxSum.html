@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>minMaxSum</title>
+</head>
+<body>
+<script>
+    //Mini-Max Sum
+    // cách 1 : tìm max, tìm min -> tổng - max; tổng mảng - min
+    // Cách 2: sort từ bé đến lơn -> tổng - số đầu tiền; tổng - số cuối cùng
+
+    function minMaxSum(array) {
+        let sum = 0;
+        let max = arr[0];
+        let min = arr[0];
+        let minSum = 0;
+        let maxSum = 0;
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] > max) {
+                max = arr[i]
+            }
+            if (arr[i] < min){
+                min = arr[i]
+            }
+            sum += arr[i]
+        }
+        console.log(sum-max)
+        console.log(sum-min)
+    }
+        let arr = [1,2,4,5,6]
+        minMaxSum(arr);
+
+    // function sortArr(arr){
+    //     arr.sort(function(a,b){return a- b})
+
+
+
+
+</script>
+</body>
+</html>

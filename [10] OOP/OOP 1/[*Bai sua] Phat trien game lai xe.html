@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            width: 800px;
+            height: 600px;
+            border: 1px solid;
+            margin: auto;
+        }
+
+        #xe {
+            position: relative;
+            left: 400px;
+            top: 500px;
+            width: 50px;
+            height: 50px;
+        }
+
+        #money {
+            position: relative;
+            left: 100px;
+            top: 100px;
+            width: 50px;
+            height: 50px;
+        }
+    </style>
+</head>
+<body onload="docReady()">
+<div>
+    <img id="xe" src="https://nhandaovadoisong.com.vn/wp-content/uploads/2019/05/hinh-anh-xe-may-dep-1.jpg" style="top: 500px; left: 400px; position: relative" alt="">
+    <img id="money" src="https://hinh365.com/wp-content/uploads/2020/06/thu-vien-anh-chat-luong-cao-voi-khoang-119-652-hinh-anh-ve-dong-tien-vang-8.jpg" alt="">
+</div>
+<script>
+    let xe = document.getElementById("xe")
+    let money = document.getElementById("money")
+
+    function turnUp() {
+        let xe = document.getElementById("xe")
+        xe.style.top = (parseInt(xe.style.top) - 10) + "px"
+    }
+
+    function turnDown() {
+        let xe = document.getElementById("xe")
+        xe.style.top = (parseInt(xe.style.top) + 10) + "px"
+    }
+
+    function turnLeft() {
+        let xe = document.getElementById("xe")
+        xe.style.left = (parseInt(xe.style.left) - 10) + "px"
+    }
+
+    function turnRight() {
+        let xe = document.getElementById("xe")
+        xe.style.left = (parseInt(xe.style.left) + 10) + "px"
+    }
+
+    function moveSelection(evt) {
+        switch (evt.keyCode) {
+            case 38:
+                turnUp()
+                break
+            case 40:
+                turnDown()
+                break
+            case 37:
+                turnLeft()
+                break
+            case 39:
+                turnRight()
+                break
+        }
+    }
+
+    function docReady() {
+        window.addEventListener("keydown", moveSelection)
+    }
+</script>
+</body>
+</html>

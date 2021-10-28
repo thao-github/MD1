@@ -6,27 +6,69 @@
 </head>
 <body>
 <script>
-    function sumPrime() {
-        let check = true;
-        for (let i = 0; i < arr.length; i++) {
-            for (let j = 2; j <= Math.sqrt(arr[i]); j++) {
-                if (arr[i] % j === 0) {
-                    check = false;
+    function isPrime(number) {
+        if (number < 2) {
+            return false
+        } else {
+            for (let i = 2; i <= Math.sqrt(number); i++) {
+                if (number % i === 0) {
+                    return false
                 }
             }
-            if (check) {
-                sum = sum + arr[i]
-            }
         }
-        return sum;
+        return true
     }
 
-    let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-    let sum = 0;
-    let result = sumPrime()
-    console.log (result)
+    function displayPrimeNumberInArray(array) {
+        let sum = 0;
+        for (let i = 0; i < array.length; i++) {
+            if (isPrime(array[i])) {
+                sum += array[i]
+            }
+        }
+        document.write(sum)
+    }
 
-
+    let arr = [1, 2, 3, 5, 6, 11, 33, 499]
+    displayPrimeNumberInArray(arr)
 </script>
+
+
+<!--<script>-->
+<!--    // Cho trước 1 mảng bao gồm n phần tử-->
+<!--    // Viết hàm tính tổng các số nguyên tố trong mảng.-->
+
+<!--    let soPhanTu = parseInt(prompt(" Nhập số phần tử mảng: "));-->
+<!--    let intNumber = new Array(soPhanTu);-->
+<!--    for (let i = 0; i < intNumber.length; i++) {-->
+<!--        intNumber[i] = Math.round(Math.random() * 100 + 1);// ran-->
+<!--    }-->
+<!--    document.write("Phần tử trong mảng: " + intNumber +"<br>");-->
+
+<!--    function isPrime(a) {-->
+<!--        let flag = true;-->
+<!--        if(a<2){-->
+<!--            flag = false;-->
+<!--        }else {-->
+<!--            for (let j = 2; j <= Math.sqrt(a); j++) {-->
+<!--                if (a % j === 0) {-->
+<!--                    flag = false;-->
+<!--                    break;-->
+<!--                }-->
+<!--            }-->
+<!--            return flag;-->
+<!--        }-->
+<!--    }-->
+<!--    function sumPrimeInArray(arr){-->
+<!--        let sum=0;-->
+<!--        for (let i = 0; i < arr.length; i++) {-->
+<!--            if(isPrime(arr[i])){-->
+<!--                sum += arr[i]-->
+<!--            }-->
+<!--        }-->
+<!--        return document.write("Tổng các số nguyên tố trong mảng là " +sum)-->
+<!--    }-->
+<!--    sumPrimeInArray(intNumber)-->
+<!--</script>-->
 </body>
 </html>

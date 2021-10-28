@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Adam and Apple</title>
+</head>
+<body>
+<script>
+    class Apple {
+        weight;
+
+        constructor(weight) {
+            this.weight = weight;
+        }
+
+        getAppleWeight() {
+            return this.weight;
+        }
+
+        isEmpty() {
+            if (this.weight > 0){
+                alert ("Keep eating")
+            }
+            else{
+                alert("Stop eating")
+            }
+        }
+
+        decreaseWeight() {
+            if (this.weight > 0) {
+                this.weight--
+            }
+        }
+    }
+
+    class Human {
+        name;
+        gender;
+        weight;
+
+        constructor(name, gender, weight) {
+            this.name = name;
+            this.gender = gender;
+            this.weight = weight;
+        }
+        getWeight() {
+            return this.weight
+        }
+
+        say() {
+            alert(" Hi. I am " + this.name +"!")
+        }
+
+        eat (apple) {
+            if (apple.getAppleWeight() > 0) {
+                this.weight += 1
+                apple.decreaseWeight()
+            }
+            else {
+                document.write("Stop eating" + "<br>")
+            }
+        }
+
+        checkApple(apple) {
+            return apple.getAppleWeight()
+        }
+    }
+
+    let apple = new Apple(10)
+    apple.getAppleWeight()
+
+    let person1 = new Human("Adam", "male", 75);
+    person1.say();
+
+    document.write("Check apple weight ---> ")
+    person1.checkApple(apple);
+    document.write ("The apple weight is:" + person1.checkApple(apple) + "<br>")
+
+    document.write("When Adam eat apple --->" + "<br>")
+    person1.eat(apple)
+    person1.eat(apple)
+    document.write ("Adam weight is:" + person1.getWeight() +"<br>")
+    document.write ("The apple weight is:" + person1.checkApple(apple) + "<br>")
+
+</script>
+</body>
+</html>

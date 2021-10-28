@@ -5,31 +5,68 @@
     <title>Display Prime number</title>
 </head>
 <body>
+<!--<form>
+    <lable> Enter a number:</lable>
+    <input id="input" type="text"/>
+    <input type="button" value="Show" onclick="displayPrime()"/>
+</form>
+<p id="result"></p>-->
 
- <!--<form>
-     <lable> Enter a number:</lable>
-     <input id="display" type="text"/>
-     <input id="num" type="button" value="Show"/>
- </form> -->
- <script>
-     function displayPrime() {
-         while (number < n) {
-             let check = true;
-             for (let i = 2; i <= Math.sqrt(number); i++) {
-                 if (number % i === 0)
-                     check = false;
-             }
-             if (check) {
-                 document.write(number + " ")
-             }
-             number++
-         }
-     }
-     let n = 20;
-     let number = 2;
-     displayPrime()
+<!--<script>-->
+<!--    function isPrime() {-->
+<!--        if (number < 2) {-->
+<!--            return false;-->
+<!--        } else {-->
+<!--            for (let i = 2; i <= Math.sqrt(number); i++) {-->
+<!--                if (number % i === 0) {-->
+<!--                    return false;-->
+<!--                }-->
+<!--            }-->
+<!--        }-->
+<!--        return true;-->
+<!--    }-->
+
+<!--    function displayPrime() {-->
+<!--        let input = parseInt(document.getElementById("input").value);-->
+<!--        let data = "Các số nguyên tố nhỏ hơn " + input + " là: "-->
+<!--        for (let i = 0; i <= input; i++) {-->
+<!--            if (isPrime(i)) {-->
+<!--                data += i + " "-->
+<!--            }-->
+<!--        }-->
+<!--        document.getElementById("result").innerHTML = data-->
+<!--    }-->
+
+<!--</script>-->
 
 
- </script>
- </body>
- </html>
+<label for="input">Enter a number:&nbsp;<input type="text" id="input"></label>
+<button onclick="displayPrimeNumberLessThanInput()">Show</button>
+<p id="result"></p>
+<script>
+    function isPrime(number) {
+        if (number < 2) {
+            return false
+        } else {
+            for (let i = 2; i <= Math.sqrt(number); i++) {
+                if (number % i === 0) {
+                    return false
+                }
+            }
+        }
+        return true
+    }
+
+    function displayPrimeNumberLessThanInput() {
+        let input = parseInt(document.getElementById("input").value)
+        let data = "Các số nguyên tố nhỏ hơn " + input + " là: "
+        for (let i = 0; i < input; i++) {
+            if (isPrime(i)){
+                data += i + "; "
+            }
+        }
+        document.getElementById("result").innerHTML = data
+    }
+</script>
+</body>
+</html>

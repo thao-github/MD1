@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game don gian</title>
+</head>
+<body>
+<div id="game"></div>
+
+<script>
+    class Minion {
+        image;
+        top;
+        left;
+        size;
+        speed;
+
+        constructor(image, top, left, size, speed) {
+            this.image = image;
+            this.top = top;
+            this.left = left;
+            this.size = size;
+            this.speed = speed;
+        }
+
+        getMinionElement() {
+            return '<img width ="' + this.size + '" height ="' + this.size + '" src="' + this.image + '" style="top:' + this.top + 'px; left:' + this.left + 'px; position:absolute;"/>'
+
+        }
+
+        moveRight() {
+            this.left += this.speed;
+            console.log('ok:' + this.left);
+        }
+
+        moveLeft() {
+            this.left -= this.speed;
+            console.log('ok:' + this.left);
+        }
+
+        moveUp() {
+            this.top -= this.speed;
+            console.log('ok:' + this.top);
+        }
+
+        moveDown() {
+            this.top += this.speed;
+            console.log('ok:' + this.top);
+        }
+    }
+
+    let speed = +prompt("Input the speed : ")
+
+    let minion = new Minion("minion.png", 0, 0, 200, speed);
+    minion.src="minion.png"
+    minion.height="600"
+    minion.width="678"
+
+    function start() {
+        if (minion.top === 0 && minion.left < window.innerWidth - minion.size) {
+            minion.moveRight();
+        } else if (minion.top < window.innerHeight - minion.size && minion.left >= window.innerWidth - minion.size) {
+            minion.moveDown()
+        } else if (minion.left > 0) {
+            minion.moveLeft()
+        } else if (minion.top > 0) {
+            minion.moveUp()
+        }
+        document.getElementById("game").innerHTML = minion.getMinionElement();
+        setTimeout(start, 500)
+    }
+
+    start();
+
+</script>
+</body>
+</html>

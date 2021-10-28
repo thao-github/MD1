@@ -1,0 +1,9 @@
+table {
+    width: 400px;
+}
+td{
+    width: 33%;
+}
+tr:nth-child(even){
+    background-color: #d2d1d1;
+}
