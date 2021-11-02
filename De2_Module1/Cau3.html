@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cau 3</title>
+</head>
+<body>
+<script>
+    function countVowelLetter(str) {
+        let found = false;
+        for (let i = 0; i < str.length; i++) {
+            if (str[i] === "a" || str[i] === "o" || str[i] === "e" || str[i] === "u" || str[i] === "i") {
+                found = true;
+                count++;
+            }
+        }
+        if (!found) {
+            alert("false");
+        } else {
+            alert("There are " + count + " vowel letter in the string");
+        }
+    }
+
+    let str = prompt("Input string:");
+    let count = 0;
+    countVowelLetter(str);
+</script>
+</body>
+</html>

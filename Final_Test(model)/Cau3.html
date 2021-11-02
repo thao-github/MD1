@@ -1,10 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    // let str1 = "ILOVEYOU";
+    // let str2 = "ANDILOVEYOUTOO";
+    //
+    // // function isContainStr(str3, str4) {
+    //     for (let i = 0; i < str2.length; i++) {
+    //         if (str2[i] === str1[0]) {
+    //             for (let j = 0; j < str1.length; j++) {
+    //                 if (str1[j] !== str2[i + j]) {
+    //                     check = false;
+    //                     break;
+    //                 }
+    //             }
+    //         }
+    //         else {
+    //             check = false;
+    //         }
+    //     }
+    //     return check;
+    // }
+
+    let str1 = "nguyenvantoan"
+    let str2 = "nguyen"
+
+    function isFindStr(str3, str4) {
+        let isCheck = false;
+        for (let i = 0; i < str1.length; i++) {
+            if (str1[i] === str2[0]) {
+                for (let j = 1; j < str2.length; j++) {
+                    if (str2[j] !== str1[i + j]) {
+                        isCheck = false;
+                        break;
+                    } else {
+                        isCheck = true;
+                    }
+                }
+            }
+        }
+        alert(isCheck);
+    }
+
+    isFindStr(str1, str2)
+
+</script>
 </body>
 </html>

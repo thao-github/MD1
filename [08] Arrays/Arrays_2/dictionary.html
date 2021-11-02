@@ -7,28 +7,31 @@
 <body>
 
 <h2> English - Vietnamese dictionary </h2>
-Input word <input type="text" id="txt">
-<input type="button" value="Look up" onclick="look_up();">
+<label for="txt"> Input word: </label>
+<input type="text" id="txt">
+<input type="button" value="Look up" onclick="lookUp();">
 <script>
+
     let engW = ["variable", "operator", "loop", "array", "element", "index"];
     let vW = ["biến", "toán tử", "vòng lặp", "mảng", "phần tử", "chỉ số"];
-    let found = false;
 
-    function look_up() {
+
+    function lookUp () {
+        let input = document.getElementById("txt").value;
+        let found = false;
         for (let i = 0; i < engW.length; i++) {
-            let input = document.getElementById("txt").value;
             if (input === engW[i]) {
                 found = true;
-                alert(vW[i])
+                alert (vW[i])
                 break;
             }
         }
-        if (found) {
-            alert(vW[i])
-        } else {
-            alert("Can not be found")
+            if (!found) {
+                alert("Can not be found")
+            }
         }
-    }
+
+
 
 </script>
 </body>

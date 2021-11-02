@@ -1,10 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    function findMax3(point) {
+        let max1= 0;
+        let max2 = 0;
+        let max3 = 0;
+        for (let i = 0; i < point.length; i++) {
+            if (max1 < point[i]) {
+                max1 = point[i]
+            }
+        }
+        for (let i = 0; i < point.length; i++) {
+            if (max2 < point[i] && point[i] < max1) {
+                max2 = point[i]
+            }
+        }
+        for (let i = 0; i < point.length; i++) {
+            if (max3 < point[i] && point[i] < max2) {
+                max3 = point[i]
+            }
+        }
+        return max3;
+    }
+
+    let point = [6,7,8,9,10,9,4]
+    alert(findMax3 (point));
+
+</script>
 </body>
 </html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cau 4</title>
+</head>
+<body>
+<script>
+    class Animal {
+        name;
+        weight;
+
+        constructor(name, weight) {
+            this.name = name;
+            this.weight = weight;
+        }
+
+        getName() {
+            return this.name;
+        }
+
+        setName(name) {
+            this.name = name;
+        }
+
+        getWeight() {
+            return this.weight;
+        }
+
+        setWeight(name) {
+            this.weight = name;
+        }
+
+        toString(name, weight) {
+            document.write("The " + this.name + "'s weight is " + this.weight + "<br>");
+        }
+    }
+
+    let objAnimal1 = new Animal("Elephant", 45.6);
+    objAnimal1.toString();
+
+    let objAnimal2 = new Animal("Dolphin", 55);
+    objAnimal2.setName("Mouse");
+    document.write(objAnimal2.getName() + " is the name of objAnimal2 after changing name.");
+</script>
+</body>
+</html>

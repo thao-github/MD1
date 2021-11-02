@@ -2,9 +2,83 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Mèo bắt chuột và ăn chuột.</title>
 </head>
 <body>
+<script>
+    class Rat {
+        name;
+        weight;
+        speed;
+        status;
 
+        constructor(name, weight, speed, status){
+            this.name = name;
+            this.weight = weight;
+            this.speed = speed;
+            this.status = status;
+        }
+        getWeight(){
+            return this.weight
+        }
+        getStatus(){
+
+        }
+        getSpeed(){
+            return this.speed
+        }
+
+        squeak () {
+            alert ("Hi. I am " + this.name + " chit chit...!")
+        }
+    }
+
+    class Cat {
+        name;
+        weight;
+        speed;
+
+        constructor(name, weight, speed) {
+            this.name = name;
+            this.weight = weight;
+            this.speed = speed;
+        }
+        getName() {
+            return this.name
+        }
+
+        squeak() {
+            alert ("Hi. I am " + this.name + " meo meo...!")
+        }
+
+        getSpeed() {
+            return this.speed
+        }
+
+        catchRat(rat) {
+            if (cat.getSpeed > rat.getSpeed) {
+                document.write("Cat catched Rat")
+            } else {
+                document.write("Keep trying Cat!")
+            }
+        }
+
+        eatRat(rat) {
+            if (rat.status) {
+                this.weight += rat.getWeight()
+            }
+        }
+    }
+
+    let cat = new Cat ("Tom", 5, 20)
+    cat.squeak()
+    cat.catchRat(rat)
+    document.write("The Cat weight:" + cat.getWeight())
+
+    let rat = new Rat ("Jerry", 1, 15)
+    rat.squeak()
+
+
+</script>
 </body>
 </html>
